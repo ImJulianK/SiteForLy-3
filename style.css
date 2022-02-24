@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.dedicatoria {
+    /*background-color: red;*/
+    height: 50px;
+    align-content: center;
+    font-size: 80%;
+}
+
+.corFundo {
+    background: linear-gradient(90deg, #2e32aa, #4187c4);
+    color: #fff;
+}
+
+#heading div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#heading .linha1,
+#heading .linha2,
+#heading .audio-controler,
+#heading .nome-musica {
+    margin: 0 80px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#heading .linha1,
+#heading .linha2 {
+    padding: 15px 0; /* topo, direira, baixo, esquerda */
+}
+
+#heading .audio-controler,
+#heading .nome-musica {
+    padding: 2px 0; /* topo, direira, baixo, esquerda */
+}
+
+.linha1 {
+    /*background-color: skyblue;*/
+    margin: 0, 80px, 0, 0;
+}
+
+.linha2 {
+    /*background-color: skyblue;*/
+    margin: 0, 0, 0, 80px;
+}
+
+.musica {
+    background-color: #f2f3f5;
+    height: 60px;
+    display: flex;
+}
+
+.musica a {
+    background-color: #f2f3f5;
+    color:#000;
+}
+
+.musica audio {
+    background-color: #f2f3f5;
+}
+
+.audio-controler {
+    margin: 0, 80px, 0, 0;
+    border-radius: 0%;
+    color: black;
+}
+
+.nome-musica {
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 55px;
+    text-decoration: none;
+}
+
+.sair {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #4187c4;
+    padding: 5px 30px;
+    border: 20px;
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.sair:hover {
+    cursor: pointer;
+    background: #2e32aa;
+}
+
+.texto {
+    border-width: 100vw;
+    text-align: center;
+    padding: 7px 0 7px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+}
+.texto span {
+    display: inline-block;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    white-space: nowrap;
+    padding-left: 100%;
+    color: #fff;
+    margin: 10px;
+    animation: textox 15s linear infinite;
+}
+.texto::after,
+.texto::before {
+    content: "";
+    position: relative;
+    width: 100px;
+    height: calc(100% - 36px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(-15deg);
+}
+.texto::after {
+    z-index: -1;
+}
+.texto::before {
+    z-index: 2;
+}
+
+@keyframes textox {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-250%, 0);
+    }
+}
+
+.fundo {
+    background: linear-gradient(45deg, #ffffff, #8dcffc);
+    background-position: top center;
+
+}
+
+.cabecalho--fixo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid rgba(0, 0, 0, 0.45);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #4187c4;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+
+/*css for automatic navigation*/
+
+.juju {
+    padding: 25px;
+}
+
+.espaco{
+    height:190px;
+}
+
+.paragrafos{
+    display: flex;
+    padding: 20px 10px 20px 10px;
+}
+
+.paragrafos p{
+    width: 30vw;
+    margin: 0 auto;
+    font-size: 20px;
+    padding:20px;
+}
+
+.textinho{
+    padding:10px 45px;
+}
+
+.pessoas{
+    display:flex;
+}
+
+.ly, .ju{
+    margin: 0 auto;
+}
+
+.ly p, .ju p{
+    padding-left: 30px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.pessoas a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fim p {
+    padding: 20px 30px;
+    font-size: 18px;
+}
+
+footer h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.pessoas h4{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer{
+    background: linear-gradient(90deg, #2e32aa, #4187c4);;
+    color: #fff;
+}
+
+.fim{
+    padding: 10px 30px;
+}
